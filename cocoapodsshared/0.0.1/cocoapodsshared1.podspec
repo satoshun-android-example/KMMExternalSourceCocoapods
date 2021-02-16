@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'cocoapodsshared'
-    spec.version                  = '1.0-SNAPSHOT'
+    spec.name                     = 'cocoapodsshared1'
+    spec.version                  = '0.0.1'
     spec.homepage                 = 'https://github.com/Kotlin/kotlin-with-cocoapods-sample'
     spec.source                   = { :git => "Not Published", :tag => "Cocoapods/#{spec.name}/#{spec.version}" }
     spec.authors                  = ''
@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
 
     spec.ios.deployment_target = '13.5'
 
-    spec.dependency 'AFNetworking', '~> 4.0'
+                
 
     spec.pod_target_xcconfig = {
         'KOTLIN_TARGET[sdk=iphonesimulator*]' => 'ios_x64',
@@ -28,13 +28,13 @@ Pod::Spec.new do |spec|
 
     spec.script_phases = [
         {
-            :name => 'Build cocoapodsshared',
+            :name => 'Build cocoapodsshared1',
             :execution_position => :before_compile,
             :shell_path => '/bin/sh',
             :script => <<-SCRIPT
                 set -ev
                 REPO_ROOT="$PODS_TARGET_SRCROOT"
-                "$REPO_ROOT/../gradlew" -p "$REPO_ROOT" :cocoapodsshared:syncFramework \
+                "$REPO_ROOT/../gradlew" -p "$REPO_ROOT" :cocoapodsshared1:syncFramework \
                     -Pkotlin.native.cocoapods.target=$KOTLIN_TARGET \
                     -Pkotlin.native.cocoapods.configuration=$CONFIGURATION \
                     -Pkotlin.native.cocoapods.cflags="$OTHER_CFLAGS" \

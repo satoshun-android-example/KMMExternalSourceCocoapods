@@ -8,7 +8,7 @@ plugins {
   id("kotlinx-serialization")
 }
 group = "com.example.kmmtemplate.cocoapods"
-version = "1.0-SNAPSHOT"
+version = "0.0.1"
 
 val coroutineVersion = "1.4.2-native-mt"
 val serializationVersion = "1.0.1"
@@ -36,6 +36,8 @@ kotlin {
     homepage = "https://github.com/Kotlin/kotlin-with-cocoapods-sample"
 
     ios.deploymentTarget = "13.5"
+
+    frameworkName = "cocoapodsshared"
 
 //    pod("AFNetworking") { version = "~> 4.0" }
 //    pod("RxSwift") { version = "~> 6.0" }

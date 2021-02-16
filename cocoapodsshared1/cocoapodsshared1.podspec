@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'cocoapodsshared1'
-    spec.version                  = '1.0-SNAPSHOT'
+    spec.version                  = '0.0.1'
     spec.homepage                 = 'https://github.com/Kotlin/kotlin-with-cocoapods-sample'
     spec.source                   = { :git => "Not Published", :tag => "Cocoapods/#{spec.name}/#{spec.version}" }
     spec.authors                  = ''
@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.summary                  = 'Kotlin sample project with CocoaPods dependencies'
 
     spec.static_framework         = true
-    spec.vendored_frameworks      = "build/cocoapods/framework/cocoapodsshared1.framework"
+    spec.vendored_frameworks      = "build/cocoapods/framework/cocoapodsshared.framework"
     spec.libraries                = "c++"
     spec.module_name              = "#{spec.name}_umbrella"
 
