@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'cocoapodsshared'
+    spec.name                     = 'cocoapodsshared1'
     spec.version                  = '1.0-SNAPSHOT'
     spec.homepage                 = 'https://github.com/Kotlin/kotlin-with-cocoapods-sample'
     spec.source                   = { :git => "Not Published", :tag => "Cocoapods/#{spec.name}/#{spec.version}" }
@@ -8,18 +8,18 @@ Pod::Spec.new do |spec|
     spec.summary                  = 'Kotlin sample project with CocoaPods dependencies'
 
     spec.static_framework         = true
-    spec.vendored_frameworks      = "build/cocoapods/framework/cocoapodsshared.framework"
+    spec.vendored_frameworks      = "build/cocoapods/framework/cocoapodsshared1.framework"
     spec.libraries                = "c++"
     spec.module_name              = "#{spec.name}_umbrella"
 
     spec.ios.deployment_target = '13.5'
 
-    spec.dependency 'AFNetworking', '~> 4.0'
+                
 
     spec.pod_target_xcconfig = {
         'KOTLIN_TARGET[sdk=iphonesimulator*]' => 'ios_x64',
         'KOTLIN_TARGET[sdk=iphoneos*]' => 'ios_arm',
-        'KOTLIN_TARGET[sdk=watchsimulator*]' => 'watchos_x86',
+        'KOTLIN_TARGET[sdk=watchsimulator*]' => 'watchos_x64',
         'KOTLIN_TARGET[sdk=watchos*]' => 'watchos_arm',
         'KOTLIN_TARGET[sdk=appletvsimulator*]' => 'tvos_x64',
         'KOTLIN_TARGET[sdk=appletvos*]' => 'tvos_arm64',
@@ -28,13 +28,13 @@ Pod::Spec.new do |spec|
 
     spec.script_phases = [
         {
-            :name => 'Build cocoapodsshared',
+            :name => 'Build cocoapodsshared1',
             :execution_position => :before_compile,
             :shell_path => '/bin/sh',
             :script => <<-SCRIPT
                 set -ev
                 REPO_ROOT="$PODS_TARGET_SRCROOT"
-                "$REPO_ROOT/../gradlew" -p "$REPO_ROOT" :cocoapodsshared:syncFramework \
+                "$REPO_ROOT/../gradlew" -p "$REPO_ROOT" :cocoapodsshared1:syncFramework \
                     -Pkotlin.native.cocoapods.target=$KOTLIN_TARGET \
                     -Pkotlin.native.cocoapods.configuration=$CONFIGURATION \
                     -Pkotlin.native.cocoapods.cflags="$OTHER_CFLAGS" \

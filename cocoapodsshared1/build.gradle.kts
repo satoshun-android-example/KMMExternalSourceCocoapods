@@ -37,7 +37,7 @@ kotlin {
 
     ios.deploymentTarget = "13.5"
 
-    pod("AFNetworking") { version = "~> 4.0" }
+//    pod("AFNetworking") { version = "~> 4.0" }
 //    pod("RxSwift") { version = "~> 6.0" }
 //    pod("RxCocoa") { version = "~> 6.0" }
 //    pod("RxRelay") { version = "~> 6.0" }
