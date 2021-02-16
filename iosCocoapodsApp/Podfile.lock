@@ -14,25 +14,29 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - cocoapodsshared (1.0-SNAPSHOT):
-    - AFNetworking (~> 4.0)
+  - ARGenericTableViewController (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 4.0)
-  - cocoapodsshared (from `../cocoapodsshared`)
+  - ARGenericTableViewController (from `https://github.com/artsy/ARGenericTableViewController.git`)
 
 SPEC REPOS:
   trunk:
     - AFNetworking
 
 EXTERNAL SOURCES:
-  cocoapodsshared:
-    :path: "../cocoapodsshared"
+  ARGenericTableViewController:
+    :git: https://github.com/artsy/ARGenericTableViewController.git
+
+CHECKOUT OPTIONS:
+  ARGenericTableViewController:
+    :commit: f4c9028754558e196ab9c5111dcd3a4229c5bedf
+    :git: https://github.com/artsy/ARGenericTableViewController.git
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  cocoapodsshared: 248f6856ebad9506cec720695f117e08a1ceafc0
+  ARGenericTableViewController: 61a0897ba66c35111b5d1cc3b44884282bd3c1a5
 
-PODFILE CHECKSUM: 77072d7aa0e8f616021d79af5b94bbc2370d7317
+PODFILE CHECKSUM: b177088e238d63892409159fd12220cb22a8af12
 
 COCOAPODS: 1.10.1
