@@ -28,12 +28,12 @@ Pod::Spec.new do |spec|
 
     spec.script_phases = [
         {
-            :name => 'Build cocoapodsshared1',
+            :name => 'Build cocoapodsshared',
             :execution_position => :before_compile,
             :shell_path => '/bin/sh',
             :script => <<-SCRIPT
                 set -ev
-                REPO_ROOT="$PODS_TARGET_SRCROOT"
+                REPO_ROOT="/Users/stsn/.cocoapods/repos/satoshun-android-example/cocoapodsshared1"
                 "$REPO_ROOT/../gradlew" -p "$REPO_ROOT" :cocoapodsshared1:syncFramework \
                     -Pkotlin.native.cocoapods.target=$KOTLIN_TARGET \
                     -Pkotlin.native.cocoapods.configuration=$CONFIGURATION \
