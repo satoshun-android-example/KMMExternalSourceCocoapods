@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'cocoapodsshared1'
+    spec.name                     = 'cocoapodsshared'
     spec.version                  = '0.0.1'
     spec.homepage                 = 'https://github.com/Kotlin/kotlin-with-cocoapods-sample'
     spec.source                   = { :git => "Not Published", :tag => "Cocoapods/#{spec.name}/#{spec.version}" }
@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
 
     spec.script_phases = [
         {
-            :name => 'Build cocoapodsshared1',
+            :name => 'Build cocoapodsshared',
             :execution_position => :before_compile,
             :shell_path => '/bin/sh',
             :script => <<-SCRIPT
