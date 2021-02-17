@@ -1,8 +1,8 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'cocoapodsshared'
+    spec.name                     = 'cocoapodsshared1'
     spec.version                  = '0.0.1'
     spec.homepage                 = 'https://github.com/Kotlin/kotlin-with-cocoapods-sample'
-    spec.source                   = { :git => "https://github.com/satoshun-android-example/KMMExternalSourceCocoapods.git", :tag => "0.0.1" }
+    spec.source                   = { :git => "Not Published", :tag => "Cocoapods/#{spec.name}/#{spec.version}" }
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = 'Kotlin sample project with CocoaPods dependencies'
@@ -28,18 +28,18 @@ Pod::Spec.new do |spec|
 
     spec.script_phases = [
         {
-            :name => 'Build cocoapodsshared',
+            :name => 'Build cocoapodsshared1',
             :execution_position => :before_compile,
             :shell_path => '/bin/sh',
             :script => <<-SCRIPT
                 set -ev
-                REPO_ROOT="/Users/stsn/.cocoapods/repos/satoshun-android-example/cocoapodsshared1"
+                REPO_ROOT="$PODS_TARGET_SRCROOT"
                 "$REPO_ROOT/../gradlew" -p "$REPO_ROOT" :cocoapodsshared1:syncFramework \
                     -Pkotlin.native.cocoapods.target=$KOTLIN_TARGET \
                     -Pkotlin.native.cocoapods.configuration=$CONFIGURATION \
                     -Pkotlin.native.cocoapods.cflags="$OTHER_CFLAGS" \
                     -Pkotlin.native.cocoapods.paths.headers="$HEADER_SEARCH_PATHS" \
-                    -Pkotlin.native.cocoapods.paths.frameworks="/Users/stsn/.cocoapods/repos/satoshun-android-example/cocoapodsshared1/build/cocoapods/framework"
+                    -Pkotlin.native.cocoapods.paths.frameworks="$FRAMEWORK_SEARCH_PATHS"
             SCRIPT
         }
     ]
