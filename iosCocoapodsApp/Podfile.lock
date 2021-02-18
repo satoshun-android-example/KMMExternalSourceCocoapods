@@ -14,21 +14,21 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - cocoapodsshared (0.0.1)
+  - cocoapodsshared (0.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 4.0)
   - cocoapodsshared
 
 SPEC REPOS:
-  https://github.com/satoshun-android-example/KMMExternalSourceCocoapods.git:
+  https://github.com/satoshun-android-example/KMMCocoapodsSpecs.git:
     - cocoapodsshared
   trunk:
     - AFNetworking
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  cocoapodsshared: 4d2b22abfda5b9f4bab1d58878aedbc66503f8a0
+  cocoapodsshared: 9ddb6d84d48299a9b86146770781f69bca22f1de
 
 PODFILE CHECKSUM: b2682733bf3808a24afe9f44b93b9ad9fceb0c1e
 

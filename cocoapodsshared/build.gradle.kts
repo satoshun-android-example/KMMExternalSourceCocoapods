@@ -8,7 +8,7 @@ plugins {
   id("kotlinx-serialization")
 }
 group = "com.example.kmmtemplate.cocoapods"
-version = "0.0.1"
+version = "0.0.2"
 
 val coroutineVersion = "1.4.2-native-mt"
 val serializationVersion = "1.0.1"
