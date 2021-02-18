@@ -6,7 +6,7 @@ source 'https://github.com/satoshun-android-example/KMMCocoapodsSpecs.git'
 
 
 target 'iosApp' do
-    pod 'AFNetworking', '~> 4.0'
+    # pod 'AFNetworking', '~> 4.0'
 
     pod 'cocoapodsshared' 
 end
