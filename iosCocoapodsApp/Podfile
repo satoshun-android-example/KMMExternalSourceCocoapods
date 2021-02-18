@@ -2,11 +2,11 @@ use_frameworks!
 
 platform :ios, '13.5'
 
-source 'https://github.com/satoshun-android-example/KMMExternalSourceCocoapods.git'
+source 'https://github.com/satoshun-android-example/KMMCocoapodsSpecs.git'
 
 
 target 'iosApp' do
-    pod 'cocoapodsshared' #, git: "https://github.com/satoshun-android-example/KMMExternalSourceCocoapods.git"
+    pod 'cocoapodsshared' #, git: "https://github.com/satoshun-android-example/KMMCocoapodsSpecs.git"
 
     pod 'AFNetworking', '~> 4.0'
 end
