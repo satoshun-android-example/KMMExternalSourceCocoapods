@@ -14,6 +14,7 @@ Pod::Spec.new do |spec|
 
     spec.ios.deployment_target = '13.5'
 
+    spec.preserve_paths           = "**/*.*"
                 
 
     spec.pod_target_xcconfig = {
