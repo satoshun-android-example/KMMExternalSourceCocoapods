@@ -3,10 +3,12 @@ use_frameworks!
 platform :ios, '13.5'
 
 source 'https://github.com/satoshun-android-example/KMMCocoapodsSpecs.git'
-
+# source 'git@github.com:satoshun-android-example/KMMCocoapodsPrivateSpec.git'
+source 'https://cdn.cocoapods.org/'
 
 target 'iosApp' do
-    # pod 'AFNetworking', '~> 4.0'
+    pod 'AFNetworking', '~> 4.0'
 
-    pod 'cocoapodsshared' 
+    # pod 'cocoapodsshared', :git => "git@github.com:satoshun-android-example/KMMCocoapodsPrivateSpec.git"
+    pod 'cocoapodsshared'
 end

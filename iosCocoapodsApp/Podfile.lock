@@ -1,16 +1,35 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
   - cocoapodsshared (0.0.3)
 
 DEPENDENCIES:
+  - AFNetworking (~> 4.0)
   - cocoapodsshared
 
 SPEC REPOS:
-  https://github.com/satoshun-android-example/KMMCocoapodsSpecs.git:
+  "git@github.com:satoshun-android-example/KMMCocoapodsPrivateSpec.git":
     - cocoapodsshared
+  trunk:
+    - AFNetworking
 
 SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   cocoapodsshared: c4c8d7ff02d0c6a338e84f1f416e8caad17bbe1d
 
-PODFILE CHECKSUM: 95d545f26eb890e1bc422c921aa030bb5f49e6d7
+PODFILE CHECKSUM: 772e389456cb7b9eed444fb337fd54ae921cc525
 
 COCOAPODS: 1.10.1
