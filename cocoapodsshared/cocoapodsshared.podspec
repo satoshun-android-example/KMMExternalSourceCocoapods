@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
     spec.name                     = 'cocoapodsshared'
     spec.version                  = '0.0.1'
     spec.homepage                 = 'https://github.com/Kotlin/kotlin-with-cocoapods-sample'
-    spec.source                   = { :git => "https://github.com/satoshun-android-example/KMMExternalSourceCocoapods.git", :tag => "0.0.1" }
+    spec.source                   = { :git => "Not Published", :tag => "Cocoapods/#{spec.name}/#{spec.version}" }
     spec.authors                  = ''
     spec.license                  = ''
     spec.summary                  = 'Kotlin sample project with CocoaPods dependencies'
@@ -14,7 +14,6 @@ Pod::Spec.new do |spec|
 
     spec.ios.deployment_target = '13.5'
 
-    spec.preserve_paths           = "**/*.*"
                 
 
     spec.pod_target_xcconfig = {
@@ -35,7 +34,7 @@ Pod::Spec.new do |spec|
             :script => <<-SCRIPT
                 set -ev
                 REPO_ROOT="$PODS_TARGET_SRCROOT"
-                "$REPO_ROOT/../gradlew" -p "$REPO_ROOT" :cocoapodsshared1:syncFramework \
+                "$REPO_ROOT/../gradlew" -p "$REPO_ROOT" :cocoapodsshared:syncFramework \
                     -Pkotlin.native.cocoapods.target=$KOTLIN_TARGET \
                     -Pkotlin.native.cocoapods.configuration=$CONFIGURATION \
                     -Pkotlin.native.cocoapods.cflags="$OTHER_CFLAGS" \

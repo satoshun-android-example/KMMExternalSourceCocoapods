@@ -1,4 +1,4 @@
 rootProject.name = "KMMTemplateCocoaPods"
 
 include(":androidApp")
-include(":cocoapodsshared1")
+include(":cocoapodsshared")
